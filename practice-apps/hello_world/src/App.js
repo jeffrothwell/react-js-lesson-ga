@@ -11,7 +11,7 @@ class App extends Component {
           <h1 className="App-title">Waddup Chompers</h1>
         </header>
         <p className="App-intro">
-          <marquee>dis my app now</marquee>
+          dis my app now
         </p>
       </div>
     );
