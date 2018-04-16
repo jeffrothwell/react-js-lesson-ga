@@ -9,7 +9,10 @@ class Hello extends Component {
 
     // make sure to return some UI
     return (
-      <h1>Hello World!</h1>
+      <div>
+        <h1>Hello World!</h1>
+        <p>This is my sick first react app.</p>
+      </div>
     )
   }
 }
