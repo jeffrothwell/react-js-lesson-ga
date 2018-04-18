@@ -4,7 +4,7 @@ import Hello from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <Hello name={"Nick"} />,
+  <Hello name={"Nick"} age={24} />,
   document.getElementById('root')
 );
 registerServiceWorker();
