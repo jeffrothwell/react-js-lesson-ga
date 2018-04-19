@@ -3,20 +3,23 @@ import './App.css';
 
 // bring in Comment class
 import Comment from './Comment.js';
+import Author from './Author.js';
 
 class Post extends Component {
   render() {
 
-    let allComments = [
-      <Comment body={this.props.comments[0]} />,
-      <Comment body={this.props.comments[1]} />,
-      <Comment body={this.props.comments[2]} />
-    ]
+    let allAuthors = this.props.authors.map(author => {
+      return <Author body={author} />
+    })
+
+    let allComments = this.props.comments.map(comment => {
+      return <Comment body={comment} />
+    })
 
     return (
       <div>
         <h1>{this.props.title}</h1>
-        <h3>by: {this.props.author}</h3>
+        {allAuthors}
         <p>{this.props.body}</p>
         <p>Comments:</p>
         {allComments}

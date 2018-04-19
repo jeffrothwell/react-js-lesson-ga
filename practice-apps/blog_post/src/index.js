@@ -10,7 +10,7 @@ var post = {
     "Wookerson",
     "Gordo",
     "Floyd the Weasel"
-  ]
+  ],
   body: "Don't even try to say they're not. You'd be wrong.",
   comments: [
     "Heads",
@@ -22,7 +22,7 @@ var post = {
 ReactDOM.render(<
   Post
   title={post.title}
-  author={post.author}
+  authors={post.authors}
   body={post.body}
   comments={post.comments}
   />, document.getElementById('root'));
