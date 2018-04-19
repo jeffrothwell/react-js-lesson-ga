@@ -6,7 +6,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 var post = {
   title: "Phish is the best, overall",
-  author: "Wookerson",
+  authors: [
+    "Wookerson",
+    "Gordo",
+    "Floyd the Weasel"
+  ]
   body: "Don't even try to say they're not. You'd be wrong.",
   comments: [
     "Heads",
