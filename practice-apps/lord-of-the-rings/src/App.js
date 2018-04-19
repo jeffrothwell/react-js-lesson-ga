@@ -16,6 +16,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Movie title={"The Fellowship Of The Ring"} hrs={2} mins={58} />
+        <Movie title={"The Two Towers"} hrs={2} mins={59} />
+        <Movie title={"The Return Of The King"} hrs={3} mins={21} />
       </div>
     );
   }
