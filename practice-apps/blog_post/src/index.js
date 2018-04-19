@@ -10,7 +10,8 @@ var post = {
   body: "Don't even try to say they're not. You'd be wrong.",
   comments: [
     "Heads",
-    "Chomp-on, chomper"
+    "Chomp-on, chomper",
+    "Tiiiiight post brah - couldn't agree more."
   ]
 }
 
