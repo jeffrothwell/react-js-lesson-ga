@@ -12,9 +12,15 @@ class Hello extends Component {
     this.state = { moodPoints: 1 }
   }
   increaseMood(e) {
-    this.setState({
-      moodPoints: this.state.moodPoints + 1
-    })
+    if (this.state.moodPoints < 10) {
+      this.setState({
+        moodPoints: this.state.moodPoints + 1
+      })
+    } else if (this.state.moodPoints = 10) {
+      this.setState({
+        moodPoints: 1
+      })
+    }
   }
   // what should the component render?
   render () {
