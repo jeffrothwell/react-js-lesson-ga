@@ -6,6 +6,12 @@ import Comment from './Comment.js';
 import Author from './Author.js';
 
 class Post extends Component {
+  constructor (props) {
+    super()
+
+    this.state = { body: props.body }
+  }
+
   render() {
 
     let allAuthors = this.props.authors.map(author => {
@@ -20,7 +26,7 @@ class Post extends Component {
       <div>
         <h1>{this.props.title}</h1>
         {allAuthors}
-        <p>{this.props.body}</p>
+        <p>{this.state.body}</p>
         <p>Comments:</p>
         {allComments}
       </div>
