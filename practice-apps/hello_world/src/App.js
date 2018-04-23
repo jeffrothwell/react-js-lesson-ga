@@ -11,6 +11,11 @@ class Hello extends Component {
     // define initial state
     this.state = { moodPoints: 1 }
   }
+  increaseMood(e) {
+    this.setState({
+      moodPoints: this.state.moodPoints + 1
+    })
+  }
   // what should the component render?
   render () {
     // make sure to return some UI
@@ -21,6 +26,7 @@ class Hello extends Component {
         <p>You love {this.props.favourites[1]}</p>
         <p>On a scale of 1 - 10</p>
         <p>Your mood level is: {this.state.moodPoints}</p>
+        <button onClick={(e) => this.increaseMood(e)}>Cheer Up!</button>
       </div>
     )
   }
