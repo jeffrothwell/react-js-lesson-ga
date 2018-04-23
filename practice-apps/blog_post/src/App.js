@@ -12,6 +12,19 @@ class Post extends Component {
     this.state = { body: props.body }
   }
 
+  updateBody(e){
+    let newBody = prompt("What should the new body be?")
+    this.setState({
+      body: newBody
+    })
+  }
+
+  handleFormInput(e){
+    this.setState({
+      body: e.target.value
+    })
+  }
+
   render() {
 
     let allAuthors = this.props.authors.map(author => {
@@ -27,6 +40,8 @@ class Post extends Component {
         <h1>{this.props.title}</h1>
         {allAuthors}
         <p>{this.state.body}</p>
+        <button onClick={(e) => this.updateBody(e)}>Edit Body</button>
+        <input type="text" onChange={(e) => this.handleFormInput(e)} />
         <p>Comments:</p>
         {allComments}
       </div>
