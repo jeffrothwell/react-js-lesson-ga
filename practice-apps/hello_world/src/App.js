@@ -4,6 +4,14 @@ import React, {Component} from 'react';
 
 // define our Hello component
 class Hello extends Component {
+  // what should happen when we load our component
+  constructor (props) {
+    // super() makes sure we first load all funcitonality of the Component class
+    super()
+    // define initial state
+    this.state = { moodPoints: 1 }
+  }
+
   // what should the component render?
   render () {
 
