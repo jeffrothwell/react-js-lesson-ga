@@ -11,16 +11,16 @@ class Hello extends Component {
     // define initial state
     this.state = { moodPoints: 1 }
   }
-
   // what should the component render?
   render () {
-
     // make sure to return some UI
     return (
       <div>
         <h1>Hello {this.props.name}!</h1>
         <p>You are {this.props.age} years old</p>
         <p>You love {this.props.favourites[1]}</p>
+        <p>On a scale of 1 - 10</p>
+        <p>Your mood level is: {this.state.moodPoints}</p>
       </div>
     )
   }
