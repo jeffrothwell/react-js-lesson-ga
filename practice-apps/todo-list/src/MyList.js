@@ -26,7 +26,7 @@ class MyList extends Component {
         <ol>
           {listItemRenders}
         </ol>
-        <button onClick={(e) => this.clearList(e)}>Clear List</button>
+        <button onClick={(e) => this.clearList(e)}>Finished The List</button>
       </div>
     );
   }
