@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import MyList from './MyList';
-import registerServiceWorker from './registerServiceWorker';
 
 var theList = [
   "buy Camden tix",

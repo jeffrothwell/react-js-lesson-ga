@@ -9,6 +9,7 @@ class MyList extends Component {
   }
 
   clearList (e) {
+    console.log("Clearing the list!");
     this.setState({
       stateListItems: []
     })
@@ -21,7 +22,7 @@ class MyList extends Component {
     })
 
     return (
-      <div class="list-container">
+      <div className="list-container">
         <h1>This stuff needs to get done:</h1>
         <ol>
           {listItemRenders}
