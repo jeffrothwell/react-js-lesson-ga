@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.list-container {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
