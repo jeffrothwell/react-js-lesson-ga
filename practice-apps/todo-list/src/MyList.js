@@ -8,6 +8,12 @@ class MyList extends Component {
     this.state = { stateListItems: props.listItems }
   }
 
+  clearList (e) {
+    this.setState({
+      stateListItems: []
+    })
+  }
+
   render() {
 
     let listItemRenders = this.state.stateListItems.map( (item, index) => {
@@ -20,6 +26,7 @@ class MyList extends Component {
         <ol>
           {listItemRenders}
         </ol>
+        <button onClick={(e) => this.clearList(e)}>Clear List</button>
       </div>
     );
   }
