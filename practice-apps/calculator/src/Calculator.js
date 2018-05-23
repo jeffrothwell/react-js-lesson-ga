@@ -3,6 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 class Calculator extends Component {
+  contstructor (props) {
+    super();
+
+    this.state = {
+      num1: 0,
+      num2: 0,
+      sum: 0
+    }
+  }
+
   render() {
     return (
       <div className="Calculator">
