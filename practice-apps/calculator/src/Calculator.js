@@ -8,6 +8,7 @@ class Calculator extends Component {
     this.state = { sum: 0, operation: '+' }
 
     this.calculateSum = this.calculateSum.bind(this)
+    this.handleOperationChange = this.handleOperationChange.bind(this)
   }
 
   calculateSum() {
@@ -15,6 +16,12 @@ class Calculator extends Component {
 
     this.setState({
       sum: newSum,
+    })
+  }
+
+  handleOperationChange(e) {
+    this.setState({
+      operation: e.target.value
     })
   }
 
@@ -31,25 +38,37 @@ class Calculator extends Component {
             />
             <div className="radio">
               <label>
-                <input type="radio" value="+" checked={this.state.operation === '+'} />
+                <input type="radio" value="+"
+                  checked={this.state.operation === '+'}
+                  onChange={this.handleOperationChange}
+                />
                 +
               </label>
             </div>
             <div className="radio">
               <label>
-                <input type="radio" value="-" />
+                <input type="radio" value="-"
+                  checked={this.state.operation === '-'}
+                  onChange={this.handleOperationChange}
+                />
                 -
               </label>
             </div>
             <div className="radio">
               <label>
-                <input type="radio" value="x" />
+                <input type="radio" value="x"
+                  checked={this.state.operation === 'x'}
+                  onChange={this.handleOperationChange}
+                />
                 x
               </label>
             </div>
             <div className="radio">
               <label>
-                <input type="radio" value="/" />
+                <input type="radio" value="/"
+                  checked={this.state.operation === '/'}
+                  onChange={this.handleOperationChange}
+                />
                 /
               </label>
             </div>
