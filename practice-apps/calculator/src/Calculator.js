@@ -11,24 +11,43 @@ class Calculator extends Component {
     this.handleOperationChange = this.handleOperationChange.bind(this)
   }
 
-  performCalculation() {
-    var newSum = (parseInt(this.refs.val1.value) || 0) + (parseInt(this.refs.val2.value) || 0);
-
-    this.setState({
-      result: newSum,
-    })
-  }
-
   handleOperationChange(e) {
     this.setState({
       operation: e.target.value
     })
   }
 
+  performCalculation() {
+    var val1 = (parseInt(this.refs.val1.value)) || 0
+    var val2 = (parseInt(this.refs.val2.value)) || 0
+    var operation = this.state.operation
+
+    switch (operation) {
+      case "+":
+        var newResult = val1 + val2
+        break;
+      case "-":
+        var newResult = val1 - val2
+        break;
+      case "x":
+        var newResult = val1 * val2
+        break;
+      case "/":
+        var newResult = val1 / val2
+        break;
+      default:
+        var newResult = val1 + val2
+    }
+
+    this.setState({
+      result: newResult,
+    })
+  }
+
   render() {
     return (
       <div className="Calculator">
-        <h1>Add with React!</h1>
+        <h1>Calculate with React!</h1>
 
         <div className="add">
            <input
@@ -40,7 +59,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="+"
                   checked={this.state.operation === '+'}
-                  onChange={this.handleOperationChange}
+                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
                 />
                 +
               </label>
@@ -49,7 +68,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="-"
                   checked={this.state.operation === '-'}
-                  onChange={this.handleOperationChange}
+                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
                 />
                 -
               </label>
@@ -58,7 +77,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="x"
                   checked={this.state.operation === 'x'}
-                  onChange={this.handleOperationChange}
+                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
                 />
                 x
               </label>
@@ -67,7 +86,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="/"
                   checked={this.state.operation === '/'}
-                  onChange={this.handleOperationChange}
+                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
                 />
                 /
               </label>
