@@ -12,9 +12,10 @@ class Calculator extends Component {
   }
 
   handleOperationChange(e) {
+    var newOperation = e.target.value;
     this.setState({
-      operation: e.target.value
-    })
+      operation: newOperation
+    }, () => {this.performCalculation()})
   }
 
   performCalculation() {
@@ -59,7 +60,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="+"
                   checked={this.state.operation === '+'}
-                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
+                  onChange={this.handleOperationChange}
                 />
                 +
               </label>
@@ -68,7 +69,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="-"
                   checked={this.state.operation === '-'}
-                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
+                  onChange={this.handleOperationChange}
                 />
                 -
               </label>
@@ -77,7 +78,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="x"
                   checked={this.state.operation === 'x'}
-                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
+                  onChange={this.handleOperationChange}
                 />
                 x
               </label>
@@ -86,7 +87,7 @@ class Calculator extends Component {
               <label>
                 <input type="radio" value="/"
                   checked={this.state.operation === '/'}
-                  onChange={e => {this.handleOperationChange(e); this.performCalculation()}}
+                  onChange={this.handleOperationChange}
                 />
                 /
               </label>
