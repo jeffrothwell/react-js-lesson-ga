@@ -5,17 +5,16 @@ class Calculator extends Component {
   constructor(props) {
     super()
 
-    this.state = { sum: 0 }
+    this.state = { sum: 0, operation: '+' }
 
     this.calculateSum = this.calculateSum.bind(this)
   }
 
   calculateSum() {
-    console.log(this.state);
     var newSum = (parseInt(this.refs.val1.value) || 0) + (parseInt(this.refs.val2.value) || 0);
-    console.log(newSum);
+
     this.setState({
-      sum: newSum
+      sum: newSum,
     })
   }
 
@@ -30,7 +29,30 @@ class Calculator extends Component {
               ref="val1"
               onKeyUp={this.calculateSum}
             />
-           <span>+</span>
+            <div className="radio">
+              <label>
+                <input type="radio" value="+" checked={this.state.operation === '+'} />
+                +
+              </label>
+            </div>
+            <div className="radio">
+              <label>
+                <input type="radio" value="-" />
+                -
+              </label>
+            </div>
+            <div className="radio">
+              <label>
+                <input type="radio" value="x" />
+                x
+              </label>
+            </div>
+            <div className="radio">
+              <label>
+                <input type="radio" value="/" />
+                /
+              </label>
+            </div>
            <input
              type="text"
              ref="val2"
