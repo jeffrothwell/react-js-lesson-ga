@@ -10,18 +10,33 @@ class Calculator extends Component {
       num2: 0,
       sum: 0
     }
+
+    this.updateNum1 = this.updateNum1.bind(this)
+    this.updateNum2 = this.updateNum2.bind(this)
+    this.calculateSum = this.calculateSum.bind(this)
   }
 
   calculateSum() {
-    var newSum = this.state.num1 + this.state.num2;
+    console.log(this.state);
+    var newSum = (this.state.num1) + (this.state.num2);
+    console.log(newSum);
     this.setState({
       sum: newSum
     })
   }
 
   updateNum1(e) {
+    var newNum1 = parseInt(e.target.value)
     this.setState({
-      num1: e.target.value
+      num1: newNum1
+    })
+    this.calculateSum()
+  }
+
+  updateNum2(e) {
+    var newNum2 = parseInt(e.target.value)
+    this.setState({
+      num2: newNum2
     })
     this.calculateSum()
   }
@@ -38,7 +53,11 @@ class Calculator extends Component {
               value={this.state.num1}
             />
            <span>+</span>
-           <input type="text" />
+           <input
+             type="text"
+             onChange={(e) => this.updateNum2(e)}
+             value={this.state.num2}
+            />
            <span>=</span>
            <h3>{this.state.sum}</h3>
         </div>
