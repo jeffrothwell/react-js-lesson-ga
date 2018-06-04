@@ -43,6 +43,7 @@ class Calculator extends Component {
     this.setState({
       result: newResult,
     })
+    console.log(this.state);
   }
 
   render() {
