@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import MyList from './MyList';
+import ToDoList from './ToDoList';
 
 var theList = [
   "buy Camden tix",
@@ -10,6 +11,6 @@ var theList = [
 ]
 
 ReactDOM.render(
-  <MyList listItems={theList} />,
+  <ToDoList listItems={theList} />,
   document.getElementById('root')
 );
