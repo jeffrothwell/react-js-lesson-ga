@@ -28,7 +28,8 @@ class FruitFilter extends Component {
   render() {
     return (
       <div>
-        
+        <FruitFilterInput value={this.state.filterValue} onChange={this.handleFilterChange} />
+        <FruitList fruitsToDisplay={this.state.fruitsToDisplay} />
       </div>
     );
   }
