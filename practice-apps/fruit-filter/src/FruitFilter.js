@@ -7,6 +7,7 @@ class FruitFilter extends Component {
     super(props);
     this.state = {
       fruitsToDisplay: props.fullFruitList,
+      unmatchedFruits: [],
       filterValue: ''
     }
     this.handleFilterChange = this.handleFilterChange.bind(this)
@@ -21,8 +22,12 @@ class FruitFilter extends Component {
       const filteredFruitList = props.fullFruitList.filter(fruit =>
       fruit.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase()))
 
+      const unmatchedFruits = props.fullFruitList.filter(fruit =>
+      !fruit.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase()))
+
       return {
         fruitsToDisplay: filteredFruitList,
+        unmatchedFruits,
         filterValue
       }
     })
@@ -32,7 +37,10 @@ class FruitFilter extends Component {
     return (
       <div>
         <FruitFilterInput value={this.state.filterValue} onChange={this.handleFilterChange} />
+        <h3>Matches:</h3>
         <FruitList fruitsToDisplay={this.state.fruitsToDisplay} />
+        <h3>No Matches Here:</h3>
+        <FruitList fruitsToDisplay={this.state.unmatchedFruits} />
       </div>
     );
   }
