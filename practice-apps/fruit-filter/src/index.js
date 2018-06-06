@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import FruitFilter from './FruitFilter';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<FruitFilter />, document.getElementById('root'));
