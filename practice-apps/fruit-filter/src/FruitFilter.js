@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import FruitFilterInput from './FruitFilterInput';
+import FruitList from './FruitList';
 
 class FruitFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {
       fruitsToDisplay: props.fullFruitList,
-      filterValue: '';
+      filterValue: ''
     }
+    this.handleFilterChange = this.handleFilterChange.bind(this)
   }
 
   handleFilterChange(e) {
