@@ -6,7 +6,15 @@ class Procedures extends Component {
       <div>
         <h2>Procedures</h2>
         <div>
-          stuff here
+          {this.props.procedures.map(proc => {
+            return (
+              <div>
+                <h4>{proc.name}</h4>
+                <p>Cost: ${proc.cost}</p>
+                <p>Time: {proc.timeInMinutes} minutes</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     );

@@ -25,7 +25,9 @@ class App extends Component {
               <Link to="/contact">Contact Us!</Link>
             </nav>
             <Route exact path="/" component={Home} />
-            <Route path="/procedures" component={Procedures} />
+            <Route path="/procedures" component={
+              () => (<Procedures procedures={this.props.procedures}/>)
+            }/>
             <Route path="/contact" component={Contact} />
           </div>
         </Router>
