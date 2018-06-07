@@ -4,7 +4,7 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <h1>Dentist Site</h1>
+        <h2>Contact</h2>
         <h3>Address</h3>
         <p>123 Some Street</p>
         <p>Anytown, ON</p>

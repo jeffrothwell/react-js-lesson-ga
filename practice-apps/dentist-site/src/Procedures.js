@@ -4,7 +4,7 @@ class Procedures extends Component {
   render() {
     return (
       <div>
-        <h1>Dentist Site</h1>
+        <h2>Procedures</h2>
         <p>
           List of Procedures will go here
         </p>
