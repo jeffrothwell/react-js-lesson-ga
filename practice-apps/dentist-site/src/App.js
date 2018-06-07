@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 import {
   BrowserRouter as Router,
@@ -11,9 +12,10 @@ import Procedures from './Procedures';
 import Contact from './Contact';
 
 class App extends Component {
+
   render() {
     return (
-      <div>
+      <div className="App">
         <h1>Dentist Site</h1>
         <Router>
           <div>

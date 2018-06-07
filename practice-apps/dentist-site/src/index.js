@@ -27,5 +27,7 @@ const procedures = {
   },
 }
 
-ReactDOM.render(<App procedures={procedures} />, document.getElementById('root'));
+ReactDOM.render(<App procedures={procedures} />,
+  document.getElementById('root')
+);
 registerServiceWorker();
