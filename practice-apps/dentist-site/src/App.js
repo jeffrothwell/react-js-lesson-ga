@@ -17,12 +17,14 @@ class App extends Component {
         <h1>Dentist Site</h1>
         <Router>
           <div>
+            <nav>
+              <Link to="/">Go to Home Page</Link>
+              <Link to="/procedures">See Our Procedures</Link>
+              <Link to="/contact">Contact Us!</Link>
+            </nav>
             <Route exact path="/" component={Home} />
             <Route path="/procedures" component={Procedures} />
             <Route path="/contact" component={Contact} />
-            <p><Link to="/">Go to Home Page</Link></p>
-            <p><Link to="/procedures">See Our Procedures</Link></p>
-            <p><Link to="/contact">Contact Us!</Link></p>
           </div>
         </Router>
       </div>
