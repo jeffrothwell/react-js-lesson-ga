@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Post from './Post'
 
-// bring in Comment class
+// bring in Comment and Author class
 import Comment from './Comment.js';
 import Author from './Author.js';
 
