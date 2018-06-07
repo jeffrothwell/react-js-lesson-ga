@@ -6,7 +6,7 @@ class Procedures extends Component {
       <div>
         <h1>Dentist Site</h1>
         <p>
-          Welcome to my dentist site.
+          List of Procedures will go here
         </p>
       </div>
     );
