@@ -37,7 +37,7 @@ class Post extends Component {
 
     return (
       <div>
-        <h1>{this.props.blogPost.title}</h1>
+        <h3>{this.props.blogPost.title}</h3>
         {allAuthors}
         <p>{this.state.body}</p>
         <button onClick={(e) => this.updateBody(e)}>Edit Body</button>
