@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Post from './App';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-var post = {
+const blogPost = {
   title: "Phish is the best, overall",
   authors: [
     "Wookerson",
@@ -15,15 +15,30 @@ var post = {
   comments: [
     "Heads",
     "Chomp-on, chomper",
-    "Tiiiiight post brah - couldn't agree more."
+    "Tiiiiight blogPost brah - couldn't agree more."
   ]
 }
 
+const aboutMe = {
+  title: "About Me - Wookerson",
+  body: "Find me on lot, selling my wares.\nChomper anthems all night inside the show..."
+}
+
+const theBestShow = {
+  title: "The Best Show",
+  body: "Silly question, every Phish show ever."
+}
+
+const favouriteFood = {
+  title: "My Favourite Food",
+  body: "Lot Burritos after the show - Mall Dawgs before."
+}
+
 ReactDOM.render(<
-  Post
-  title={post.title}
-  authors={post.authors}
-  body={post.body}
-  comments={post.comments}
-  />, document.getElementById('root'));
+  App
+  blogPost={blogPost}
+  aboutMe={aboutMe}
+  theBestShow={theBestShow}
+  favouriteFood={favouriteFood}
+/>, document.getElementById('root'));
 registerServiceWorker();
