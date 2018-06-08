@@ -7,13 +7,7 @@ class App extends Component {
     return (
       <div>
         <h1>Thanks for visiting Wookersons page</h1>
-        <
-          Post
-          title={this.props.title}
-          authors={this.props.authors}
-          body={this.props.body}
-          comments={this.props.comments}
-        />
+        < Post blogPost={this.props.blogPost} />
       </div>
     );
   }

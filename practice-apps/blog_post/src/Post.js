@@ -9,7 +9,7 @@ class Post extends Component {
   constructor (props) {
     super()
 
-    this.state = { body: props.body }
+    this.state = { body: props.blogPost.body }
   }
 
   updateBody(e){
@@ -27,17 +27,17 @@ class Post extends Component {
 
   render() {
 
-    let allAuthors = this.props.authors.map(author => {
+    let allAuthors = this.props.blogPost.authors.map(author => {
       return <Author body={author} />
     })
 
-    let allComments = this.props.comments.map(comment => {
+    let allComments = this.props.blogPost.comments.map(comment => {
       return <Comment body={comment} />
     })
 
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <h1>{this.props.blogPost.title}</h1>
         {allAuthors}
         <p>{this.state.body}</p>
         <button onClick={(e) => this.updateBody(e)}>Edit Body</button>
