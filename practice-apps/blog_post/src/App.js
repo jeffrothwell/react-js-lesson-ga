@@ -21,19 +21,27 @@ class App extends Component {
           <div>
             <nav>
               <Link to="/">Home</Link>
-              <Link to="/aboutme">See Our Procedures</Link>
-              <Link to="/contact">Contact Us!</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/aboutme">About Me</Link>
+              <Link to="/thebestshow">The Best Show</Link>
+              <Link to="/favouritefood">My Favourite Food</Link>
             </nav>
             <Route exact path="/" component={Home} />
+            <Route path="/blog" component={
+              () => (<Post blogPost={this.props.blogPost}/>)
+            }/>
             <Route path="/aboutme" component={
               () => (<AboutMe aboutMe={this.props.aboutMe}/>)
             }/>
-            <Route path="/contact" component={Contact} />
+            <Route path="/thebestshow" component={
+              () => (<TheBestShow theBestShow={this.props.theBestShow}/>)
+            }/>
+            <Route path="/favouritefood" component={
+              () => (<FavouriteFood favouriteFood={this.props.favouriteFood}/>)
+            }/>
           </div>
         </Router>
-        <h1>Thanks for visiting Wookersons page</h1>
-        < Post blogPost={this.props.blogPost} />
-        < AboutMe aboutMe={this.props.aboutMe} />
+        <p>Thanks for visiting Wookersons page</p>
       </div>
     );
   }
