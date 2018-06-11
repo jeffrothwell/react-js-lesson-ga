@@ -33,11 +33,11 @@ class Home extends Component {
         </div>
       )
     } else {
-        return (
-          <div>
-            <h2>Loading</h2>
-          </div>
-        )
+      return (
+        <div>
+          <h2>Loading</h2>
+        </div>
+      )
     }
   }
 }
