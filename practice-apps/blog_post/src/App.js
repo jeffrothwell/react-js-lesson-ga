@@ -16,7 +16,7 @@ import FavouriteFood from './FavouriteFood'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <Router>
           <div>
             <nav>

@@ -1,3 +1,18 @@
+body, a {
+  color: #FAFAFA;
+  font-family: sans-serif;
+  text-align: center;
+}
+
 .App {
   text-align: center;
+  width: 650px;
+  margin: 0 auto;
+  background-color: rgba(40,50,200,0.8);
+  padding: 15px;
+}
+
+.App a {
+  padding: 5px 10px;
+  text-decoration: none;
 }

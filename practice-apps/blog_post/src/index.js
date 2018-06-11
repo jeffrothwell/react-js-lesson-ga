@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -21,7 +20,7 @@ const blogPost = {
 
 const aboutMe = {
   title: "About Me - Wookerson",
-  body: "Find me on lot, selling my wares.\nChomper anthems all night inside the show..."
+  body: "Find me on lot, selling my wares.\nChomper anthems all night, grind my teeth and stare"
 }
 
 const theBestShow = {
